@@ -1,12 +1,13 @@
 <?php 
 
-    // #1 Intro
+    // #4 to define variables
+    $name = "yoshi";
+    $age = 25;
+    $space = " ";
 
-    // #2 Installation
-
-    // #3 printing first php string 
-    echo 'hello world';
-
+    // #4 to define constants
+    define('ADDRESS', '4th cross street');
+    define('CITY', 'nyc');
 
 ?>
 
@@ -19,10 +20,7 @@
 </head>
 <body>
     <h1>User profile page</h1>
-    <div>
-        <!-- // #3 printing first php string  -->
-    <h2><?php echo 'hello world'; ?></h2>
+    <span><?php echo $name, $space, $age, $space, ADDRESS, $space, CITY ?></span>
 
-    </div>
 </body>
 </html>
