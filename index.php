@@ -1,13 +1,8 @@
 <?php 
 
-    // #4 to define variables
+    $stringOne = 'my email is ';
+    $stringTwo = 'smr@gmail.com';
     $name = "yoshi";
-    $age = 25;
-    $space = " ";
-
-    // #4 to define constants
-    define('ADDRESS', '4th cross street');
-    define('CITY', 'nyc');
 
 ?>
 
@@ -19,8 +14,17 @@
     <title>My first php file</title>
 </head>
 <body>
-    <h1>User profile page</h1>
-    <span><?php echo $name, $space, $age, $space, ADDRESS, $space, CITY ?></span>
+    <!-- String concatenation -->
+    <h1><?php echo $stringOne.$stringTwo ?></h1>
+    <h2><?php echo "Hi I am $name" ?></h2>
+    <p><?php echo 'Hi I\'m a software developer'?></p>
+    <p><?php echo "Today is my \"birthday\"" ?></p>
 
+    <!-- It will print string index -->
+    <p><?php echo $name[4]; ?></p>
+    <p><?php echo strlen($name); ?></p>
+    <p><?php echo strtoupper($name); ?></p>
+    <p><?php echo strtolower($name); ?></p>
+    <p><?php echo str_replace('y', 'k', $name); ?></p>
 </body>
 </html>
