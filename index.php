@@ -1,8 +1,7 @@
 <?php 
 
-    $stringOne = 'my email is ';
-    $stringTwo = 'smr@gmail.com';
-    $name = "yoshi";
+    $radius = 24; // integer
+    $pi = 3.14; // float
 
 ?>
 
@@ -14,17 +13,39 @@
     <title>My first php file</title>
 </head>
 <body>
-    <!-- String concatenation -->
-    <h1><?php echo $stringOne.$stringTwo ?></h1>
-    <h2><?php echo "Hi I am $name" ?></h2>
-    <p><?php echo 'Hi I\'m a software developer'?></p>
-    <p><?php echo "Today is my \"birthday\"" ?></p>
+   <!-- Mathematical operators -->
+   <!-- +, -, /, %, ** -->
+    <p><?php echo $pi * $radius ** 2 ?></p>
 
-    <!-- It will print string index -->
-    <p><?php echo $name[4]; ?></p>
-    <p><?php echo strlen($name); ?></p>
-    <p><?php echo strtoupper($name); ?></p>
-    <p><?php echo strtolower($name); ?></p>
-    <p><?php echo str_replace('y', 'k', $name); ?></p>
+    <!-- Order of operation - B I D M A S -->
+    <p><?php echo 2 * (4 + 9) / 3 ?></p>
+
+    <!-- Increment / Decrement operators -->
+    <!-- Pre-increment operator - First increase $radius by one, then returns $radius -->
+    <p>
+        <?php echo ++$radius, $radius ?>
+    </p>
+    <!-- 2525 -->
+
+    <!-- Post-increment operator - First returns $radius, then increases $radius by one -->
+    <p><?php echo $radius++, $radius ?></p> 
+    <!-- 2526 -->
+
+    <!-- Pre-decrement operator -->
+    <p><?php echo --$radius, $radius ?></p>
+    <!-- 2525 -->
+
+    <!-- Post-decrement operator -->
+    <p><?php echo $radius--, $radius ?></p>
+    <!-- 2524 -->
+
+    <!-- Short-hand operators -->
+    <p><?php echo $radius += 10; ?></p>
+
+    <!-- Numer function -->
+    <p><?php echo floor($pi); ?></p>
+    <p><?php echo ceil($pi); ?></p>
+    <p><?php echo pi(); ?></p>
+
 </body>
 </html>
