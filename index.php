@@ -1,7 +1,37 @@
 <?php 
 
-    $radius = 24; // integer
-    $pi = 3.14; // float
+// indexed arrays
+$peopleOne = ['shaun', 'crystal', 'ryu'];
+// echo "$peopleOne[1] ";
+
+$peopleTwo = array('ken', 'chun-li');
+// print "$peopleTwo[0]  ";
+
+$ages = [10, 20, 30, 40, 50];
+// echo $ages;
+
+$ages[1] = 25;
+$ages[] = 60;
+array_push($ages, 70);
+// print_r($ages);
+// echo count($ages);
+
+// Merge arrays
+$peopleThree = array_merge($peopleOne, $peopleTwo);
+// print_r($peopleThree);
+
+// Associative arrays (Key & value pairs)
+$ninjasOne = ['name' => 'mohan', 'age' => 25, 'city' => 'blr'];
+// echo($ninjasOne['age']);
+$ninjasOne['city'] = 'nkl';
+// print_r($ninjasOne);
+
+$ninjasTwo = array('profession' => 'software', 'interests' => 'coding, fitness');
+$ninjasTwo['salary'] = 'lpa';
+$ninjasTwo['team'] = 'csk'; 
+// print_r($ninjasTwo);
+$ninjasThree = array_merge($ninjasOne, $ninjasTwo);
+print_r($ninjasThree);
 
 ?>
 
@@ -10,42 +40,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first php file</title>
+    <title>Arrays</title>
 </head>
 <body>
-   <!-- Mathematical operators -->
-   <!-- +, -, /, %, ** -->
-    <p><?php echo $pi * $radius ** 2 ?></p>
-
-    <!-- Order of operation - B I D M A S -->
-    <p><?php echo 2 * (4 + 9) / 3 ?></p>
-
-    <!-- Increment / Decrement operators -->
-    <!-- Pre-increment operator - First increase $radius by one, then returns $radius -->
-    <p>
-        <?php echo ++$radius, $radius ?>
-    </p>
-    <!-- 2525 -->
-
-    <!-- Post-increment operator - First returns $radius, then increases $radius by one -->
-    <p><?php echo $radius++, $radius ?></p> 
-    <!-- 2526 -->
-
-    <!-- Pre-decrement operator -->
-    <p><?php echo --$radius, $radius ?></p>
-    <!-- 2525 -->
-
-    <!-- Post-decrement operator -->
-    <p><?php echo $radius--, $radius ?></p>
-    <!-- 2524 -->
-
-    <!-- Short-hand operators -->
-    <p><?php echo $radius += 10; ?></p>
-
-    <!-- Numer function -->
-    <p><?php echo floor($pi); ?></p>
-    <p><?php echo ceil($pi); ?></p>
-    <p><?php echo pi(); ?></p>
 
 </body>
 </html>
