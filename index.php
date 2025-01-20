@@ -1,36 +1,30 @@
 <?php 
 
-$calligraphy = [ 'italic', 'copperplate', 'spencerian', 'gothic', 'fraktur' ];
-// For loop
-for($i = 0; $i < count($calligraphy); $i++){
-    echo $calligraphy[$i] . '<br />';
-}
+// Comparison booleans (true or false);
+// echo true;
+// echo false;
+// echo 5 > 10;
+// echo 5 < 10;
+// echo 5 == 10;
+// echo 10 == 10;
+// echo 5 != 10;
+// echo 5 <= 5;
+// echo 5 >= 5;
 
-// For each loop
-foreach($calligraphy as $script){
-    echo $script .'<br />';
-}
+// Strings
+// echo 'shaun' < 'yoshi';
+// echo 'shaun' > 'yoshi';
+// echo 'shaun' > 'Shaun';
+// echo 'mario' == 'mario';
+// echo 'mario' > 'Mario';
 
-// Multi-dimensional array - For each loop
-$products = [
-    ['title' => 'soap', 'description' => 'lorem', 'price' => 20],
-    ['title' => 'comb', 'description' => 'lorem', 'price' => 30],
-    ['title' => 'towel', 'description' => 'lorem', 'price' => 40],
-    ['title' => 'dress', 'description' => 'lorem', 'price' => 50]
-];
+// Loose vs strict equal comparison
+// echo 5 == '5';
+// echo 5 === 5;
+// echo 5 === '5';
 
-// For each loop
-foreach($products as $product){
-    echo $product['title'] . ' - ' . $product['description'] . ' - ' . $product['price'];
-    echo '<br />';
-}
-
-// While loop
-$i = 0;
-while($i < count($products)){
-    echo $products[$i]['title'] . ' - '. $products[$i]['description'] . ' - ' . $products[$i]['price'] . "<br />";
-    $i++;
-}
+// echo true == '1';
+// echo false == '';
 
 ?>
 
@@ -39,15 +33,9 @@ while($i < count($products)){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loops</title>
+    <title>Booleans & Comparisons</title>
 </head>
 <body>
-    <h3>Products</h3>
-    <ul>
-        <?php foreach($products as $product){ ?>
-            <h4><?php echo $product['title'] ?></h4>
-            <p>$ <?php echo $product['price'] ?></p>
-        <?php } ?>    
-    </ul>
+    
 </body>
-</html>
+</html> 
