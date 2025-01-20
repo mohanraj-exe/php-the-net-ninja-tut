@@ -1,30 +1,30 @@
 <?php 
 
-// Comparison booleans (true or false);
-// echo true;
-// echo false;
-// echo 5 > 10;
-// echo 5 < 10;
-// echo 5 == 10;
-// echo 10 == 10;
-// echo 5 != 10;
-// echo 5 <= 5;
-// echo 5 >= 5;
+// conditional statements
+$price = 20;
+if($price > 20){
+    echo 'the condition is met';
+} else{
+   echo 'the condition is not met';
+}
 
-// Strings
-// echo 'shaun' < 'yoshi';
-// echo 'shaun' > 'yoshi';
-// echo 'shaun' > 'Shaun';
-// echo 'mario' == 'mario';
-// echo 'mario' > 'Mario';
+// conditional statements inside the for loop
+$products = [
+    ['name' => 'soap', 'price' => 2],
+    ['name' => 'comb', 'price' => 20],
+    ['name' => 'socks', 'price' => 30],
+    ['name' => 'towel', 'price' => 40],
+];
 
-// Loose vs strict equal comparison
-// echo 5 == '5';
-// echo 5 === 5;
-// echo 5 === '5';
+foreach($products as $product){
+    if($product['price'] < 15 && $product['price'] >= 2){
+        echo $product['name'] . '<br />';
+    }
 
-// echo true == '1';
-// echo false == '';
+    if($product['price'] > 30 || $product['price'] < 20){
+        echo $product['name'] . '<br />';
+    }
+}
 
 ?>
 
@@ -33,9 +33,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booleans & Comparisons</title>
+    <title>Conditional statement</title>
 </head>
 <body>
-    
+    <div>
+        <ul>
+        <?php foreach($products as $product) { ?>
+            <?php if($product['price'] >= 2) { ?>
+                <li><?php echo $product['name'] ?></li>
+            <?php } ?>
+        <?php }?>
+        </ul>
+    </div>
 </body>
 </html> 
