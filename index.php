@@ -1,34 +1,11 @@
 <?php 
 
-// variable scope - block scope
-function myFunc(){
-    $price = 10;
-    echo $price;
-}
+// include ('calligraphers.php');
+// require ('calligraphers.php');
 
-myFunc();
-echo $price;
+// require ('calligrapher.php');
+// echo 'end of php';
 
-// Global scope
-$name = 'mario';
-function sayHello(){
-    global $name;
-    $name = 'shaun'
-;    echo "hello $name ";
-};
-
-sayHello();
-echo $name;
-
-// Over-riding the global variable by writing '&' prefix to an argument
-$name = 'mario';
-function sayBye(&$name){
-    $name = 'shaun'
-;    echo "bye $name ";
-};
-
-sayBye($name);
-echo $name;
 
 ?>
 
@@ -37,9 +14,13 @@ echo $name;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variable scope</title>
+    <title>Include and Require</title>
 </head>
 <body>
-
+    <div>
+        <?php require('calligraphers.php'); ?>
+        <?php require('calligraphers.php'); ?>
+        <?php require('calligraphers.php'); ?>
+    </div>
 </body>
 </html> 
